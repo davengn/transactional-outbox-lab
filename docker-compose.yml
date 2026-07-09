@@ -47,6 +47,15 @@ services:
     ports:
       - "8083:8083"
 
+  debezium-ui:
+    image: debezium/debezium-ui:2.5
+    depends_on:
+      - connect
+    environment:
+      KAFKA_CONNECT_URIS: http://connect:8083
+    ports:
+      - "8081:8080"
+
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
     depends_on:

@@ -16,7 +16,7 @@ create table cdc_outbox_events (
                                    event_type text not null,
                                    schema_version int not null default 1,
                                    tenant_id uuid not null,
-                                   occurred_at timestamptz not null default now(),
+                                   occurred_at timestamp not null default now(),
                                    payload jsonb not null
 );
 
@@ -28,7 +28,7 @@ create table legacy_outbox_events (
                                       aggregate_id text not null,
                                       event_type text not null,
                                       tenant_id uuid not null,
-                                      occurred_at timestamptz not null default now(),
+                                      occurred_at timestamp not null default now(),
                                       payload jsonb not null,
                                       published boolean not null default false,
                                       published_at timestamptz
