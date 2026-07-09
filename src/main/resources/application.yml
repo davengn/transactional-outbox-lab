@@ -19,5 +19,5 @@ spring:
 
 outbox-lab:
   polling-publisher:
-    enabled: false   # flip to true only for Step 9's comparison run
-    interval-ms: 500
+    enabled: true   # flip to true only for Step 9's comparison run
+    interval-ms: 1000

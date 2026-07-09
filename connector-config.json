@@ -2,6 +2,7 @@
   "name": "scanjob-outbox-connector",
   "config": {
     "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "5",
     "database.hostname": "postgres",
     "database.port": "5432",
     "database.user": "dataflow",
