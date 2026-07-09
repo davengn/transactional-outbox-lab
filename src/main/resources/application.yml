@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/outbox_lab
+    url: jdbc:postgresql://100.102.174.56:5432/outbox_lab
     username: dataflow
     password: dataflow
   jpa:
@@ -12,7 +12,7 @@ spring:
         jdbc:
           time_zone: UTC
   kafka:
-    bootstrap-servers: localhost:9094
+    bootstrap-servers: 100.102.174.56:9094
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
